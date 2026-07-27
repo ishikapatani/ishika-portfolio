@@ -1416,6 +1416,134 @@
             border-color: var(--rust);
         }
 
+        /* SCAPIA CHALLENGE SECTION */
+        .scapia-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 28px;
+            align-items: start;
+        }
+
+        .scapia-card {
+            background: var(--beige2);
+            border: 2px solid var(--ink);
+            border-radius: 22px;
+            padding: 36px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+
+        .scapia-card:hover {
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+        }
+
+        .scapia-badge {
+            display: inline-block;
+            background: var(--rust);
+            color: #fff;
+            font-family: 'Space Mono', monospace;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .scapia-title {
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 28px;
+            color: var(--ink);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .scapia-title span {
+            color: var(--rust);
+        }
+
+        .scapia-story {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--ink);
+        }
+
+        .scapia-story p {
+            margin-bottom: 16px;
+        }
+
+        .scapia-story p:last-child {
+            margin-bottom: 0;
+        }
+
+        .scapia-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .scapia-detail-tag {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            background: rgba(30, 28, 23, 0.06);
+            color: var(--ink);
+            padding: 6px 14px;
+            border-radius: 30px;
+            border: 1px solid rgba(30, 28, 23, 0.1);
+        }
+
+        .scapia-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .scapia-photo-card {
+            border-radius: 18px;
+            overflow: hidden;
+            border: 2px solid var(--ink);
+            aspect-ratio: 4/3;
+            position: relative;
+            background: #eee;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .scapia-photo-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .scapia-photo-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+
+        .scapia-photo-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: #fff;
+            padding: 8px 12px;
+            font-size: 10px;
+            font-family: 'Space Mono', monospace;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .scapia-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
     </style>
 </head>
 
@@ -1725,6 +1853,64 @@
                     <div class="iw-brief">Rebranding the Kit Kat break as a mental health session.</div>
                     <span class="iw-btn">See Strategy →</span>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="div">
+
+    <!-- LIT X SCAPIA CHALLENGE -->
+    <div id="scapia-experience" class="sec reveal">
+        <p class="sec-eye">✦ Milestone &amp; Experience</p>
+        <h2 class="sec-h">LIT × Scapia</h2>
+        <p class="sec-sub">Five videos. One challenge. An IPL match we'll never forget.</p>
+        
+        <div class="scapia-grid">
+            <!-- Left Side: Story Card -->
+            <div class="scapia-card">
+                <span class="scapia-badge">🏆 Challenge Winner</span>
+                <h3 class="scapia-title">LIT School × <span>Scapia</span></h3>
+                <div class="scapia-story">
+                    <p>LIT School threw us a challenge with Scapia (the travel fintech brand) and we said "bet." The brief? Create promotional content for the <strong>Game Super Shot</strong> launched by Scapia on their website. Our team of three went all in.</p>
+                    <p>We brainstormed, scripted, shot, and delivered <strong>five promotional videos</strong> that hit different. Each one was built to capture the energy of modern travel, cricket, and the internet-brained audience Scapia speaks to.</p>
+                    <p>We won the whole thing. And the reward? The Scapia team took us to watch the <strong>RCB vs GT IPL match live at Chinnaswamy Stadium</strong>. Walking into that stadium, feeling the roar of the crowd, and soaking in the experience with the Scapia crew was absolutely unreal.</p>
+                    <p>Honestly, this was one of those moments where creative work turned into a core memory. From cracking ideas in a classroom to standing in a packed stadium. Not a bad trade.</p>
+                </div>
+                <div class="scapia-details">
+                    <span class="scapia-detail-tag">🎬 5 Promo Videos</span>
+                    <span class="scapia-detail-tag">👥 Team of 3</span>
+                    <span class="scapia-detail-tag">🏏 RCB vs GT Live</span>
+                    <span class="scapia-detail-tag">🎯 Game Super Shot</span>
+                    <span class="scapia-detail-tag">✨ Moment Marketing</span>
+                </div>
+            </div>
+
+            <!-- Right Side: Reel -->
+            <div class="scapia-media">
+                <!-- Instagram Reel Card -->
+                <a class="reel-card" href="https://www.instagram.com/reel/DYmjJUDRMRB/?igsh=MXhnOHZjN2wwaW1vdw==" target="_blank" rel="noopener">
+                    <div class="reel-thumb-wrap">
+                        <img src="images/reel_DYmjJUDRMRB.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" alt="LIT x Scapia Reel">
+                        <div class="reel-overlay"></div>
+                        <div class="reel-platform ig-pill">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="white">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+                            </svg> Reel
+                        </div>
+                        <div class="reel-play-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                                <path d="M8 5v14l11-7z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="reel-info">
+                        <div class="reel-account">
+                            <div class="reel-avatar ig-avatar"></div>
+                            <span class="reel-username">@thelitschool</span>
+                        </div>
+                        <div class="reel-open-btn">Watch Reel ↗</div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
