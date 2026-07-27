@@ -1310,29 +1310,47 @@
 
         /* MOBILE RESPONSIVE */
         @media (max-width: 768px) {
-            nav { padding: 12px 20px; }
-            .nav-links { display: none; flex-direction: column; position: fixed; top: 60px; left: 0; right: 0; background: rgba(245, 240, 227, .97); padding: 24px; gap: 20px; border-bottom: 1px solid rgba(30,28,23,.1); }
+            #cur, #cur-dot { display: none !important; }
+            body, a, button, .ia-box, .sc, .iw, .folder-card, .pf-card, .reel-card { cursor: auto !important; }
+            html, body { overflow-x: hidden; width: 100%; }
+            nav { padding: 12px 18px; }
+            .nav-links { display: none; flex-direction: column; position: fixed; top: 58px; left: 0; right: 0; background: rgba(245, 240, 227, .98); backdrop-filter: blur(16px); padding: 24px 20px; gap: 18px; border-bottom: 2px solid var(--rust); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
             .nav-links.open { display: flex; }
-            .nav-links a { font-size: 13px; }
+            .nav-links a { font-size: 13px; font-weight: 700; }
             .hamburger { display: flex; }
-            .hero { padding: 90px 20px 40px; }
-            .hero-center { flex-direction: column; gap: 20px; }
-            .hero-photo { width: 120px; height: 165px; }
+            .hero { padding: 85px 18px 40px; min-height: auto; }
+            .hero-center { flex-direction: column; gap: 18px; text-align: center; }
+            .hero-photo { width: 130px; height: 180px; }
+            .hero-name-side { font-size: 18px; }
             .hero-title { font-size: 32px; }
             .hero-title em { font-size: 38px; }
-            .fobj { display: none; }
-            .sec { padding: 48px 20px; }
+            .fobj { display: none !important; }
+            .sec { padding: 44px 18px; }
             .sec-h { font-size: 26px; }
-            .insta-grid { grid-template-columns: 1fr; }
-            .strat-grid { grid-template-columns: 1fr; }
-            .folder-grid { grid-template-columns: 1fr; }
-            .ifiw-grid { grid-template-columns: 1fr; }
-            .folders-section { padding: 48px 20px; }
-            hr.div { margin: 0 20px; }
-            .contact-band { padding: 48px 20px; }
+            .sec-sub { font-size: 14px; margin-bottom: 24px; }
+            .ia-box { padding: 22px 18px; }
+            .ia-title { font-size: 24px; }
+            .ia-box-inner { flex-direction: column; align-items: flex-start; gap: 16px; }
+            .insta-grid { grid-template-columns: 1fr; gap: 18px; }
+            .strat-grid { grid-template-columns: 1fr; gap: 18px; }
+            .folder-grid { grid-template-columns: 1fr; gap: 24px; }
+            .ifiw-grid { grid-template-columns: 1fr; gap: 18px; }
+            .scapia-grid { grid-template-columns: 1fr; gap: 20px; }
+            .scapia-card { padding: 24px 18px; border-radius: 18px; }
+            .scapia-title { font-size: 24px; }
+            .scapia-story { font-size: 15px; line-height: 1.55; }
+            .scapia-details { gap: 8px; margin-top: 18px; }
+            .scapia-detail-tag { font-size: 10px; padding: 5px 10px; }
+            .scapia-media { max-width: 340px; margin: 0 auto; width: 100%; }
+            .folders-section { padding: 44px 18px; }
+            hr.div { margin: 0 18px; }
+            .contact-band { padding: 44px 18px; }
             .contact-band h2 { font-size: 28px; }
-            .tablet { width: 200px; }
-            .mbox { padding: 24px; }
+            .c-btns { flex-direction: column; align-items: stretch; width: 100%; gap: 12px; }
+            .c-btn { text-align: center; justify-content: center; width: 100%; }
+            .tablet { width: 230px; margin: 0 auto; }
+            .tablet-screen { height: 300px; }
+            .mbox { padding: 24px 18px; width: 92%; max-height: 85vh; border-radius: 20px; }
         }
 
         /* PHOTO FOLDER CARDS */
