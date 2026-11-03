@@ -1331,7 +1331,7 @@
             .ia-box { padding: 22px 18px; }
             .ia-title { font-size: 24px; }
             .ia-box-inner { flex-direction: column; align-items: flex-start; gap: 16px; }
-            .insta-grid { grid-template-columns: 1fr; gap: 18px; }
+            .insta-grid { gap: 12px; grid-template-columns: 1fr 1fr; }
             .strat-grid { grid-template-columns: 1fr; gap: 18px; }
             .folder-grid { grid-template-columns: 1fr; gap: 24px; }
             .ifiw-grid { grid-template-columns: 1fr; gap: 18px; }
@@ -1351,6 +1351,24 @@
             .tablet { width: 230px; margin: 0 auto; }
             .tablet-screen { height: 300px; }
             .mbox { padding: 24px 18px; width: 92%; max-height: 85vh; border-radius: 20px; }
+            .tools-grid { gap: 8px; }
+            .tool-chip { font-size: 10px; padding: 7px 12px; }
+            /* mobile 2-col reel grid */
+            .insta-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+            .reel-card { border-radius: 14px; }
+            .reel-thumb-wrap { height: 200px; }
+            .reel-username { font-size: 9px; }
+            .reel-open-btn { font-size: 9px; padding: 4px 8px; }
+            /* about section mobile */
+            .about-layout { grid-template-columns: 1fr; }
+            .about-video-frame { max-height: 300px; }
+            .about-cols { grid-template-columns: 1fr; }
+            /* sc & iw cards */
+            .sc, .iw { min-height: 180px; }
+            /* marquee */
+            .marquee-band { overflow: hidden; }
+            /* hero layout */
+            .hero-sub { font-size: 14px; }
         }
 
         /* PHOTO FOLDER CARDS */
@@ -1562,6 +1580,37 @@
             }
         }
 
+
+        /* TOOLS SECTION */
+        .tools-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 28px;
+        }
+        .tool-chip {
+            background: var(--beige2);
+            border: 1.5px solid rgba(30,28,23,.12);
+            color: var(--ink);
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .04em;
+            padding: 8px 16px;
+            border-radius: 100px;
+            transition: background .2s, border-color .2s, transform .15s;
+            cursor: default;
+        }
+        .tool-chip:hover {
+            background: var(--rust);
+            color: #fff;
+            border-color: var(--rust);
+            transform: translateY(-2px);
+        }
+        .tool-chip--learning {
+            border-style: dashed;
+            opacity: .75;
+        }
     </style>
 </head>
 
@@ -1634,7 +1683,7 @@
 
     <!-- MARQUEE -->
     <div class="marquee-band">
-        <div class="marquee-track" id="marqueeTrack"><span class="m-logo-text">UV</span><span class="m-sep">✦</span><span class="m-logo-text">Travenza</span><span class="m-sep">✦</span><span class="m-logo-text">Pronto</span><span class="m-sep">✦</span><span class="m-logo-text">Metashot</span><span class="m-sep">✦</span><span class="m-logo-text">Zecode</span><span class="m-sep">✦</span><span class="m-logo-text">Lit</span><span class="m-sep">✦</span><span class="m-logo-text">Rose in Love</span><span class="m-sep">✦</span><span class="m-logo-text">Koben Electric</span><span class="m-sep">✦</span><span class="m-logo-text">HT</span><span class="m-sep">✦</span><span class="m-logo-text">Agilitas</span><span class="m-sep">✦</span><span class="m-logo-text">Sprentzo</span><span class="m-sep">✦</span><span class="m-logo-text">Ownly</span><span class="m-sep">✦</span><span class="m-logo-text">Tuljaram Saraf</span><span class="m-sep">✦</span><span class="m-logo-text">UV</span><span class="m-sep">✦</span><span class="m-logo-text">Travenza</span><span class="m-sep">✦</span><span class="m-logo-text">Pronto</span><span class="m-sep">✦</span><span class="m-logo-text">Metashot</span><span class="m-sep">✦</span><span class="m-logo-text">Zecode</span><span class="m-sep">✦</span><span class="m-logo-text">Lit</span><span class="m-sep">✦</span><span class="m-logo-text">Rose in Love</span><span class="m-sep">✦</span><span class="m-logo-text">Koben Electric</span><span class="m-sep">✦</span><span class="m-logo-text">HT</span><span class="m-sep">✦</span><span class="m-logo-text">Agilitas</span><span class="m-sep">✦</span><span class="m-logo-text">Sprentzo</span><span class="m-sep">✦</span><span class="m-logo-text">Ownly</span><span class="m-sep">✦</span><span class="m-logo-text">Tuljaram Saraf</span><span class="m-sep">✦</span></div>
+        <div class="marquee-track" id="marqueeTrack"><span class="m-logo-text">Urban Vault</span><span class="m-sep">✦</span><span class="m-logo-text">Travenza</span><span class="m-sep">✦</span><span class="m-logo-text">Pronto</span><span class="m-sep">✦</span><span class="m-logo-text">Metashot</span><span class="m-sep">✦</span><span class="m-logo-text">Zecode</span><span class="m-sep">✦</span><span class="m-logo-text">LIT</span><span class="m-sep">✦</span><span class="m-logo-text">Rose in Love</span><span class="m-sep">✦</span><span class="m-logo-text">Oben Electric</span><span class="m-sep">✦</span><span class="m-logo-text">HT</span><span class="m-sep">✦</span><span class="m-logo-text">Agilitas</span><span class="m-sep">✦</span><span class="m-logo-text">Sprentzo</span><span class="m-sep">✦</span><span class="m-logo-text">Ownly</span><span class="m-sep">✦</span><span class="m-logo-text">Tuljaram Saraf</span><span class="m-sep">✦</span><span class="m-logo-text">Urban Vault</span><span class="m-sep">✦</span><span class="m-logo-text">Travenza</span><span class="m-sep">✦</span><span class="m-logo-text">Pronto</span><span class="m-sep">✦</span><span class="m-logo-text">Metashot</span><span class="m-sep">✦</span><span class="m-logo-text">Zecode</span><span class="m-sep">✦</span><span class="m-logo-text">LIT</span><span class="m-sep">✦</span><span class="m-logo-text">Rose in Love</span><span class="m-sep">✦</span><span class="m-logo-text">Oben Electric</span><span class="m-sep">✦</span><span class="m-logo-text">HT</span><span class="m-sep">✦</span><span class="m-logo-text">Agilitas</span><span class="m-sep">✦</span><span class="m-logo-text">Sprentzo</span><span class="m-sep">✦</span><span class="m-logo-text">Ownly</span><span class="m-sep">✦</span><span class="m-logo-text">Tuljaram Saraf</span><span class="m-sep">✦</span></div>
     </div>
 
 
@@ -1658,7 +1707,7 @@
 
             <!-- TEXT COLUMN -->
             <div class="about-text-col">
-                <p class="about-intro">Hi, I'm Ishika. At 20, my life is a mix of scripts and storyboards. I'm a writer, director, and creative strategist who's obsessed with the <em>"why"</em> behind a story. Whether I'm drafting a poem, filming a short, or building a brand from scratch, I'm always hunting for that one out-of-the-box spark that makes people actually feel something.</p>
+                <p class="about-intro">Hi, I'm Ishika. At 21, my life is a mix of scripts and storyboards. I'm a writer, director, and creative strategist who's obsessed with the <em>"why"</em> behind a story. Whether I'm drafting a poem, filming a short, or building a brand from scratch, I'm always hunting for that one out-of-the-box spark that makes people actually feel something.</p>
 
                 <p class="about-intro" style="margin-top:-8px;">I've always been a kid who loved learning everything. My mother sent me to almost every co-curricular class alongside academics, and I loved it. Dance (more than 5 styles!), painting, poster making, rangoli, calligraphy and more; I tried it all. In that process I figured out something most textbooks never tell you: the best skills are the ones that aren't listed in your syllabus.</p>
 
@@ -1699,7 +1748,7 @@
             <div class="ia-box-inner">
                 <div class="ia-left">
                     <div class="ia-title">In Action</div>
-                    <div class="ia-sub">9 pieces · YouTube &amp; Instagram · Hit play</div>
+                    <div class="ia-sub">12 pieces · YouTube &amp; Instagram · Hit play</div>
                     <div class="ia-icons">
                         <span title="YouTube">▶</span>
                         <span title="Instagram">📸</span>
@@ -1732,6 +1781,12 @@
 
 <a class="reel-card" href="https://www.instagram.com/reel/DKo6xX5SHuy/?igsh=MWY4cXFlazl6NnZiMw==" target="_blank" rel="noopener"><div class="reel-thumb-wrap"><img src="images/reel_DKo6xX5SHuy.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" alt=""><div class="reel-overlay"></div><div class="reel-platform ig-pill"><svg width="12" height="12" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg> Reel</div><div class="reel-play-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"></path></svg></div></div><div class="reel-info"><div class="reel-account"><div class="reel-avatar ig-avatar"></div><span class="reel-username">@ishuke_issues</span></div><div class="reel-open-btn">View ↗</div></div></a>
 
+
+<a class="reel-card" href="https://www.instagram.com/reel/DQemHROksjk/" target="_blank" rel="noopener"><div class="reel-thumb-wrap"><img src="images/reel_DQemHROksjk.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" alt=""><div class="reel-overlay"></div><div class="reel-platform ig-pill"><svg width="12" height="12" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg> Reel</div><div class="reel-play-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"></path></svg></div></div><div class="reel-info"><div class="reel-account"><div class="reel-avatar ig-avatar"></div><span class="reel-username">@ishuke_issues</span></div><div class="reel-open-btn">View &#x2197;</div></div></a>
+
+<a class="reel-card" href="https://www.instagram.com/reel/DT3CUR4khcE/" target="_blank" rel="noopener"><div class="reel-thumb-wrap"><img src="images/reel_DT3CUR4khcE.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" alt=""><div class="reel-overlay"></div><div class="reel-platform ig-pill"><svg width="12" height="12" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg> Reel</div><div class="reel-play-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"></path></svg></div></div><div class="reel-info"><div class="reel-account"><div class="reel-avatar ig-avatar"></div><span class="reel-username">@ishuke_issues</span></div><div class="reel-open-btn">View &#x2197;</div></div></a>
+
+<a class="reel-card" href="https://www.instagram.com/reel/DMFw4FDSvwQ/" target="_blank" rel="noopener"><div class="reel-thumb-wrap"><img src="images/reel_DMFw4FDSvwQ.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" alt=""><div class="reel-overlay"></div><div class="reel-platform ig-pill"><svg width="12" height="12" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg> Reel</div><div class="reel-play-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"></path></svg></div></div><div class="reel-info"><div class="reel-account"><div class="reel-avatar ig-avatar"></div><span class="reel-username">@ishuke_issues</span></div><div class="reel-open-btn">View &#x2197;</div></div></a>
         </div>
     </div>
     <hr class="div">
@@ -1933,6 +1988,41 @@
         </div>
     </div>
 
+
+    <hr class="div">
+
+    <!-- TOOLS I USE -->
+    <div id="tools" class="sec reveal">
+        <p class="sec-eye">&#x2736; My Toolkit</p>
+        <h2 class="sec-h">Tools I Use</h2>
+        <p class="sec-sub">The stack that powers my ideas, from writing to video to research.</p>
+        <div class="tools-grid">
+            <div class="tool-chip">Claude</div>
+            <div class="tool-chip">Gemini</div>
+            <div class="tool-chip">ChatGPT</div>
+            <div class="tool-chip">Perplexity</div>
+            <div class="tool-chip">NotebookLM</div>
+            <div class="tool-chip">Lovable</div>
+            <div class="tool-chip">Antigravity</div>
+            <div class="tool-chip">CapCut</div>
+            <div class="tool-chip">Edits by Instagram</div>
+            <div class="tool-chip">Premiere Pro</div>
+            <div class="tool-chip">Canva</div>
+            <div class="tool-chip">Runway</div>
+            <div class="tool-chip">Notion</div>
+            <div class="tool-chip">Google Trends</div>
+            <div class="tool-chip">Fish Audio</div>
+            <div class="tool-chip">ElevenLabs</div>
+            <div class="tool-chip">Nano Banana</div>
+            <div class="tool-chip">Pomelo</div>
+            <div class="tool-chip">Stitch</div>
+            <div class="tool-chip">Opal</div>
+            <div class="tool-chip">Google Spark</div>
+            <div class="tool-chip">Mixboard</div>
+            <div class="tool-chip">Google Flow</div>
+            <div class="tool-chip tool-chip--learning">Still Learning &#x1F331;</div>
+        </div>
+    </div>
     <!-- CONTACT -->
     <div id="contact" class="contact-band">
         <h2>Let's Build a Story.</h2>
@@ -1981,7 +2071,7 @@
         }
 
         // Marquee
-        const brands = ['UV', 'Travenza', 'Pronto', 'Metashot', 'Zecode', 'Lit', 'Rose in Love', 'Koben Electric', 'HT', 'Agilitas', 'Sprentzo', 'Ownly', 'Tuljaram Saraf'];
+        const brands = ['Urban Vault', 'Moody', 'Travenza', 'Pronto', 'Metashot', 'Zecode', 'LIT', 'Rose in Love', 'Oben Electric', 'HT', 'Agilitas', 'Sprentzo', 'Ownly', 'Tuljaram Saraf'];
         const track = document.getElementById('marqueeTrack');
         function buildMarquee() {
             let html = '';
